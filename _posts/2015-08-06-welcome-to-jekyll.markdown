@@ -63,19 +63,6 @@ jekyll知识，然后开始写文章了
 
 修改myronZhouJ.github.io文件夹中的_config.yml.具体的要看看文档，就是一些网站基本信息title，description和配置等等,不在这里说了，我先不对这个文件做修改，下面写个文章，至于文章内容就是你目前正在看的这个了.哈哈
 以后博文就在myronZhouJ.github.io文件夹中的_posts文件夹,
-在_posts中创建一个github_jekyll_bolg.markdown的文件，复制welcome的例子，改改就可以了.然后add，commit，push。
+我先直接修改welcome的例子，就可以了.然后add，commit，push。
 详细jekyll的知识，我还需要慢慢学习。
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
