@@ -1,11 +1,10 @@
 # Site settings
 title: Myron’s Home
 email: myron@pikicast.com
-description: test Description 
+description:  
 baseurl: "" 
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: ""
+github_username: myronZhouJ
 
 # Build settings
 markdown: kramdown
