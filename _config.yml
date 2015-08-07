@@ -36,7 +36,7 @@ theme:
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:"myronzhou"
+  disqus_shortname: "myronzhou"
   katex: false # Enable if using math markup
 
   # Localization strings
