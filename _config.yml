@@ -11,12 +11,6 @@ theme:
   description:  # used by search engines
 
   # Header and footer text
-  #header_text: >
-  #   <p> </p>
-
-  #   <p>广告位招租.</p>
-  #header_text_feature_image:
-  #footer_text: >
 
   # Icons
   rss: false
