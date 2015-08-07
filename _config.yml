@@ -5,7 +5,7 @@ url: "" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Myron's Home
+  title: Myron's Home Page
   avatar: avatar.png
   gravatar: # Email MD5 hash
   description:  # used by search engines
