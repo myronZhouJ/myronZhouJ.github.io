@@ -11,12 +11,12 @@ theme:
   description:  # used by search engines
 
   # Header and footer text
-  header_text: >
-     <p> </p>
+  #header_text: >
+  #   <p> </p>
 
-     <p>广告位招租.</p>
-  header_text_feature_image:
-  footer_text: >
+  #   <p>广告位招租.</p>
+  #header_text_feature_image:
+  #footer_text: >
 
   # Icons
   rss: false
@@ -42,7 +42,7 @@ theme:
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  disqus_shortname:"myronzhou"
   katex: false # Enable if using math markup
 
   # Localization strings
