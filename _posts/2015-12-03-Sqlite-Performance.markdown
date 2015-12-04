@@ -8,20 +8,19 @@ categories: jekyll update
 
 
 第一种方式：要插入一批数据时，每次插入数据都先对sql语句编译(准备)，然后执行（多次编译(准备)，多次执行），代码如下：
-<pre><code>
-NSLog(@"----begin-----");
-[self beginTransactionService];
-for (NSInteger i =0;i<500000;i++) {
-    NSString *sql = [NSString stringWithFormat:
-    @"INSERT INTO Slangs ('Content', 'Type') VALUES ('testText', '0')"];
-    sqlite3_exec(_database, [sql UTF8String], NULL, NULL,NULL);
-}
-[self commitTransactionService];
-NSLog(@"----end-----");
-</code></pre>
+    NSLog(@"----begin-----");
+    [self beginTransactionService];
+    for (NSInteger i =0;i<500000;i++) {
+        NSString *sql = [NSString stringWithFormat:
+        @"INSERT INTO Slangs ('Content', 'Type') VALUES ('testText', '0')"];
+        sqlite3_exec(_database, [sql UTF8String], NULL, NULL,NULL);
+    }
+    [self commitTransactionService];
+    NSLog(@"----end-----");
 
 
 2015-12-04 10:48:18.889 ViewControllerTest[2825:1131623] ----begin-----
+
 2015-12-04 10:48:28.652 ViewControllerTest[2825:1131623] ----end-----
 
 50万条，耗时9.8s
@@ -51,6 +50,7 @@ NSLog(@"----end-----");
 </code></pre>
 
 2015-12-04 10:46:11.256 ViewControllerTest[2810:1130838] ----begin-----
+
 2015-12-04 10:46:12.898 ViewControllerTest[2810:1130838] ----end-----
 
 相同的50万条，耗时1.6s
