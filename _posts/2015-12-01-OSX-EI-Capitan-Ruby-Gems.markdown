@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "升级到OS X EI Capitan 后通过gem安装的所有工具不能使用了 -command not found 错误的问题"
-date:   2015-12-03 15:42:44
+date:   2015-12-01 15:20:34
 categories: jekyll update
 ---
 mac系统升级到EI Capitan 后，所有通过gem安装的工具均不能再使用，出现command not found的错误。
