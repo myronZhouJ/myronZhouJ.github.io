@@ -9,7 +9,7 @@ categories: jekyll update
 
 第一种方式：要插入一批数据时，每次插入数据都先对sql语句编译(准备)，然后执行（多次编译(准备)，多次执行），代码如下：
 
-```
+<pre><code>
 NSLog(@"----begin-----");
 [self beginTransactionService];
 for (NSInteger i =0;i<500000;i++) {
@@ -19,7 +19,7 @@ for (NSInteger i =0;i<500000;i++) {
 }
 [self commitTransactionService];
 NSLog(@"----end-----");
-```
+</code></pre>
 
 2015-12-04 10:48:18.889 ViewControllerTest[2825:1131623] ----begin-----
 
@@ -30,7 +30,7 @@ NSLog(@"----end-----");
 
 第二种方式：要插入一批数据前，先对sql语句编译(准备)，在每次插入时通过值绑定，然后执行（一次编译(准备)，多次绑定，多次执行），代码如下：
 
-```
+<pre><code>
 NSLog(@"----begin-----");
 [self beginTransactionService];
 NSString *sql = [NSString stringWithFormat:@"INSERT INTO Slangs ('Content', 'Type') VALUES (?,?)"];
@@ -50,7 +50,7 @@ for (NSInteger i =0;i<500000;i++) {
 sqlite3_finalize(statement);
 [self commitTransactionService];
 NSLog(@"----end-----");
-```
+</code></pre>
 
 2015-12-04 10:46:11.256 ViewControllerTest[2810:1130838] ----begin-----
 
