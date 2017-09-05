@@ -8,13 +8,16 @@ categories: jekyll update
 main.m中的代码
 
     #include "stdio.h"
-    int main(int argc, char* argv[]){
-    int a = 0;
-    __block int b = 1;
+    void (^tempBlock)();
+    int main(int argc, char * argv[]){
+    int a = 12;
+    __block int b = 13;
     void (^block)() = ^{
     printf("Hello %d---%d",a,b);
     };
+    b = 14;
     block();
+    tempBlock = block;
     return 0;
     }
 
@@ -28,6 +31,8 @@ main.cpp中相关代码：
     int Reserved;
     void *FuncPtr;
     };
+
+    void (*tempBlock)();
 
     struct __Block_byref_b_0 {
     void *__isa;
@@ -56,6 +61,7 @@ main.cpp中相关代码：
 
     printf("Hello %d---%d",a,(b->__forwarding->b));
     }
+
     static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->b, (void*)src->b, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
     static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->b, 8/*BLOCK_FIELD_IS_BYREF*/);}
@@ -68,10 +74,12 @@ main.cpp中相关代码：
     } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 
     int main(int argc, char * argv[]){
-    int a = 0;
-    __attribute__((__blocks__(byref))) __Block_byref_b_0 b = {(void*)0,(__Block_byref_b_0 *)&b, 0, sizeof(__Block_byref_b_0), 1};
+    int a = 12;
+    __attribute__((__blocks__(byref))) __Block_byref_b_0 b = {(void*)0,(__Block_byref_b_0 *)&b, 0, sizeof(__Block_byref_b_0), 13};
     void (*block)() = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, a, (__Block_byref_b_0 *)&b, 570425344));
+    (b.__forwarding->b) = 14;
     ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+    tempBlock = block;
     return 0;
     }
 
