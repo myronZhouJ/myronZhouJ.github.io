@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 main.m中的代码
-
+```
     #include "stdio.h"
     void (^tempBlock)();
     int main(int argc, char * argv[]){
@@ -20,7 +20,7 @@ main.m中的代码
     tempBlock = block;
     return 0;
     }
-
+```
 clang -rewrite-objc main.m 编译生成main.cpp
 
 main.cpp中相关代码：
